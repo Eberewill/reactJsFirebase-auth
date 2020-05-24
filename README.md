@@ -2,7 +2,7 @@
 this is a react Js Application Boilerplate with Authentication, it included Login, Register and Password reset using Firebase
 To get started: 
 
-# $ gitclone https://github.com/Eberewill/reactJsFirebase-auth.git appnam
+ $ gitclone https://github.com/Eberewill/reactJsFirebase-auth.git appnam
  cd appname
  $ npm install
  
