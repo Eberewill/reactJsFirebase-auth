@@ -1,21 +1,23 @@
 import app from "firebase/app";
 import "firebase/auth";
+import "firebase/database";
 
 var config = {
-  apiKey: "AIzaSyCk9Qv8AhI6ecDCjUTMVg0p3AX_Ujmgrcc",
-  authDomain: "eventhub-937fb.firebaseapp.com",
-  databaseURL: "https://eventhub-937fb.firebaseio.com",
-  projectId: "eventhub-937fb",
-  storageBucket: "eventhub-937fb.appspot.com",
-  messagingSenderId: "414248788860",
-  appId: "1:414248788860:web:f8907124a6e88026b33af9",
-  measurementId: "G-GCX6PZ9Q5K",
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: "",
 };
 
 class Firebase {
   constructor() {
     app.initializeApp(config);
     this.auth = app.auth();
+    this.db = app.database();
   }
 
   //authentication API (contextAPI)
@@ -31,6 +33,15 @@ class Firebase {
 
   doPasswordUpdate = (password) =>
     this.auth.currentUser.updatePassword(password);
+
+  //user API
+
+  user = (uid) => this.db.ref(`users/${uid}`);
+
+  users = () => this.db.ref("users");
+
+  //chat API
+  chatRef = () => this.db.ref("general");
 }
 
 export default Firebase;
