@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "cra-template": "1.0.3",
-    "firebase": "^7.14.4",
+    "firebase": "^10.9.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
